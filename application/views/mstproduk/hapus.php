@@ -1,1 +1,220 @@
-<div class="contentpanel">      <div class="row">	  	  <form id="basicForm" method="POST" action="<?php echo base_url(); ?>Mstproduk/hapus_data" class="form-horizontal">        <div class="col-md-6">          <div class="panel">              <div class="panel-heading nopaddingbottom">                <h4 class="panel-title">Hapus Data Produk</h4>              </div>			                <div class="panel-body">               				<input type="hidden" name="id" value="<?php echo $hapus['id']; ?>" class="form-control"  />				<hr>                   <div class="form-group">                    <label class="col-sm-3 control-label">code<span class="text-danger">*</span></label>                    <div class="col-sm-4">                      <input type="text" name="code" value="<?php echo $edit['code']; ?>" class="form-control" placeholder="code" readonly />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">description<span class="text-danger">*</span></label>                    <div class="col-sm-8">                      <input type="text" name="description" value="<?php echo $edit['description']; ?>" class="form-control" placeholder="description" readonly />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Prodi<span class="text-danger">*</span></label>                    <div class="col-sm-8">                      <input type="text" name="prodi" value="<?php echo $hapus['prodi']; ?>" class="form-control" placeholder="Prodi" readonly />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Jurusan<span class="text-danger">*</span></label>                    <div class="col-sm-8">                      <input type="text" name="jurusan" value="<?php echo $hapus['jurusan']; ?>" class="form-control" placeholder="Jurusan" readonly />                    </div>                  </div>                  <div class="form-group">                    <label class="col-sm-3 control-label">Professor PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="professor_pns" value="<?php echo $hapus['professor_pns']; ?>" class="form-control" placeholder="Professor PNS" readonly />                    </div>                  </div>								 <div class="form-group">                    <label class="col-sm-3 control-label">Professor Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="professor_non_pns" value="<?php echo $hapus['professor_non_pns']; ?>" class="form-control" placeholder="Professor Non PNS" readonly />                    </div>                  </div>				  				  <div class="form-group">                    <label class="col-sm-3 control-label">Lektor Kepala PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="lektor_kepala_pns" value="<?php echo $hapus['lektor_kepala_pns']; ?>" class="form-control" placeholder="Lektor Kepala PNS" readonly />                    </div>                  </div>								 <div class="form-group">                    <label class="col-sm-3 control-label">Lektor Kepala Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="lektor_kepala_non_pns" value="<?php echo $hapus['lektor_kepala_non_pns']; ?>" class="form-control" placeholder="Lektor Kepala Non PNS" readonly />                    </div>                  </div>				  				  <div class="form-group">                    <label class="col-sm-3 control-label">Lektor PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="lektor_pns" value="<?php echo $hapus['lektor_pns']; ?>" class="form-control" placeholder="Lektor PNS" readonly />                    </div>                  </div>				                  <hr>                  <div class="row">                    <div class="col-sm-9 col-sm-offset-3">					<?php 					$level=$this->session->userdata('id_user_level');					if($level==1){ ?>                      <button type="submit"  class="btn btn-danger btn-quirk btn-wide mr5 hapus"><i class="fa fa-trash"></i> Hapus</button>					<?php } ?>                        <a href="<?php echo base_url() ?>Mstproduk" class="btn btn-quirk btn-wide btn-warning"><i class="fa fa-close"></i> Kembali</a>                    </div>                  </div>				                </div><!-- panel-body -->          </div><!-- panel -->        </div><!-- col-md-6 -->				<div class="col-sm-6">          <div class="panel">            <div class="panel-body">							 <div class="form-group">                    <label class="col-sm-3 control-label">Lektor Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="lektor_non_pns" value="<?php echo $hapus['lektor_non_pns']; ?>" class="form-control" placeholder="Lektor Non PNS" readonly />                    </div>                  </div>							  <div class="form-group">                    <label class="col-sm-3 control-label">Asisten Ahli PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="asisten_ahli_pns" value="<?php echo $hapus['asisten_ahli_pns']; ?>" class="form-control" placeholder="Asisten Ahli PNS" readonly />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Asisten Ahli Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="asisten_ahli_non_pns" value="<?php echo $hapus['asisten_ahli_non_pns']; ?>" class="form-control" placeholder="Asisten Ahli Non PNS" readonly />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Tenaga Pengajar PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="tenaga_pengajar_pns" value="<?php echo $hapus['tenaga_pengajar_pns']; ?>" class="form-control" placeholder="Tenaga Pengajar PNS" readonly />                    </div>                  </div>				  				    <div class="form-group">                    <label class="col-sm-3 control-label">Tenaga Pengajar Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="tenaga_pengajar_non_pns" value="<?php echo $hapus['tenaga_pengajar_non_pns']; ?>" class="form-control" placeholder="Tenaga Pengajar Non PNS" readonly />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Kualifikasi S3<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="terkualifikasi_s3" value="<?php echo $hapus['terkualifikasi_s3']; ?>" class="form-control" placeholder="Kualifikasi S3" readonly />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Kualifikasi Kompetensi Profesi<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="terkualifikasi_kompetensi_profesi" value="<?php echo $hapus['terkualifikasi_kompetensi_profesi']; ?>" class="form-control" placeholder="Kualifikasi Kompetensi Profesi" readonly />                    </div>                  </div>				  				  <div class="form-group">                    <label class="col-sm-3 control-label">Kualifikasi Praktisi<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="terkualifikasi_praktisi" value="<?php echo $hapus['terkualifikasi_praktisi']; ?>" class="form-control" placeholder="Kualifikasi Praktisi" readonly />                    </div>                  </div>				  				  <div class="form-group">                    <label class="col-sm-3 control-label">Pegawai PPPK<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="pegawai_pppk" value="<?php echo $hapus['pegawai_pppk']; ?>" class="form-control" placeholder="Pegawai PPPK" readonly />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Tenaga Pengajar Punya NIDN<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="text" name="nidn" value="<?php echo $hapus['nidn']; ?>" class="form-control" placeholder="Tenaga Pengajar Punya NIDN" readonly />                    </div>                  </div>					   </div><!-- panel-body -->          </div><!-- panel -->        </div><!-- col-md-6 -->		 </form>      </div><!--row -->    </div><!-- contentpanel -->		
+<div class="contentpanel">
+
+      <div class="row">
+	  
+	  <form id="basicForm" method="POST" action="<?php echo base_url(); ?>Mstproduk/hapus_data" class="form-horizontal">
+        <div class="col-md-6">
+          <div class="panel">
+              <div class="panel-heading nopaddingbottom">
+                <h4 class="panel-title">Hapus Data Produk</h4>
+              </div>
+			  
+              <div class="panel-body">
+               
+				<input type="hidden" name="id" value="<?php echo $hapus['id']; ?>" class="form-control"  />
+				<hr>
+        <div class="form-group">
+                    <label class="col-sm-3 control-label">code<span class="text-danger">*</span></label>
+                    <div class="col-sm-4">
+                      <input type="text" name="code" value="<?php echo $hapus['code']; ?>" class="form-control" placeholder="code" readonly />
+                    </div>
+                  </div>
+				  
+				   <div class="form-group">
+                    <label class="col-sm-3 control-label">description<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="description" value="<?php echo $hapus['description']; ?>" class="form-control" placeholder="description" readonly />
+                    </div>
+                  </div>
+				  
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">MOQ<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="moq" value="<?php echo $hapus['moq']; ?>" class="form-control" placeholder="Jurusan" title="Jurusan Harus Diisi" readonly />
+                    </div>
+                  </div>
+				  
+				   <div class="form-group">
+                    <label class="col-sm-3 control-label">Category PID<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="categorypid" class="form-control" value="<?php echo $hapus['categorypid']; ?>" placeholder="Category PID" title="Category PID Harus Diisi" readonly />
+                    </div>
+                  </div>
+
+				   <div class="form-group">
+                    <label class="col-sm-3 control-label">Hierarchy<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="hierarchy" value="<?php echo $hapus['hierarchy']; ?>" class="form-control" placeholder="0" title="Hierarchy Harus Diisi" readonly />
+                    </div>
+                   </div>
+				   
+				    <div class="form-group">
+                    <label class="col-sm-3 control-label">Material Group<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="materialgroup" value="<?php echo $hapus['materialgroup']; ?>" class="form-control" placeholder="0" title="Material Group"  readonly />
+                    </div>
+                   </div>
+				   
+				    <div class="row mb20">
+                    <label class="col-sm-3 control-label">DIV<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                    <input type="text" value="<?php echo $hapus['datadiv']; ?>" name="datadiv" class="form-control" placeholder="0" title="DIV" readonly />
+                    </div>
+                   </div>
+			
+					<div class="row mb20">
+                    <label class="col-sm-3 control-label">Type PID<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="text" value="<?php echo $hapus['typepid']; ?>" name="typepid" class="form-control" placeholder="0" title="Type PID" readonly />
+                    </div>
+                   </div>
+
+          <div class="row mb20">
+                    <label class="col-sm-3 control-label">Last Price (sales) Before PPN<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                    <input type="text" name="lastpricebfppn" value="<?php echo $hapus['lastpricebfppn']; ?>" class="form-control" placeholder="0" title="Last Price (sales) Before PPN" readonly />
+                    </div>
+                   </div>
+
+          <div class="row mb20">
+                    <label class="col-sm-3 control-label">New Price (sales) Before PPN<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                    <input type="text" name="newpricebfppn" value="<?php echo $hapus['newpricebfppn']; ?>" class="form-control" placeholder="0" title="New Price (sales) Before PPN" readonly />
+                    </div>
+                   </div>
+
+          <div class="row mb20">
+                    <label class="col-sm-3 control-label">Last Discount (%)<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="text" name="lastdiscount" value="<?php echo $hapus['lastdiscount']; ?>" class="form-control" placeholder="0" title="Last Discount" readonly />
+                    </div>
+                   </div>
+
+          <div class="row mb20">
+                    <label class="col-sm-3 control-label">New Discount (%)<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="text" name="newdiscount" value="<?php echo $hapus['newdiscount']; ?>" class="form-control" placeholder="0" title="New Discount" readonly />
+                    </div>
+                   </div>
+				   
+                  <hr>
+				  
+				    <div class="row">
+                    <div class="col-sm-9 col-sm-offset-3">
+                      <button type="submit" name="hapus" class="btn btn-warning btn-quirk btn-wide mr5"><i class="fa fa-trash"></i> Hapus</button>
+                      <a href="<?php echo base_url() ?>Mstproduk" class="btn btn-quirk btn-wide btn-danger"><i class="fa fa-close"></i> Kembali</a>
+                    </div>
+                  </div>
+			 	  
+              </div><!-- panel-body -->
+          </div><!-- panel -->
+      </div><!-- col-md-6 -->
+		
+		  <div class="col-sm-6">
+          <div class="panel">
+            <div class="panel-body">
+			
+					<div class="row mb20">
+                    <label class="col-sm-3 control-label">PPN<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="text" name="ppn" class="form-control" value="<?php echo $hapus['ppn']; ?>" placeholder="0" title="PPN" readonly />
+                    </div>
+                   </div>
+			
+              <div class="row mb20">
+			  <label class="col-sm-3 control-label">Buy Price Before PPN<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="buypricebfppn" value="<?php echo $hapus['buypricebfppn']; ?>" placeholder="0"  title="Buy Price Before PPN" readonly>
+                </div>     
+			  </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Buy Price After PPN<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="buypriceafppn" value="<?php echo $hapus['buypriceafppn']; ?>" placeholder="0" title="Buy Price After PPN" readonly>
+                </div>
+              </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Sale Price After PPN<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="salepriceafppn" value="<?php echo $hapus['salepriceafppn']; ?>" placeholder="0" title="Sale Price After PPN" readonly>
+                </div>
+              </div>
+			  
+			  <div class="row mb20">
+			  <label class="col-sm-3 control-label">Kode Sub Kategori<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" value="<?php echo $hapus['subkat']; ?>" name="subkat" placeholder="0" title="Kode Sub Kategori" readonly>
+                </div>
+              </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Nama Sub Kategori<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" value="<?php echo $hapus['namasubkat']; ?>" name="namasubkat" placeholder="0" title="Nama Sub Kategori" readonly>
+                </div>
+              </div>
+			  
+			    <div class="row mb20">
+			  <label class="col-sm-3 control-label">Kode Kategori<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="kat" value="<?php echo $hapus['kat']; ?>" placeholder="0" title="Kode Kategori" readonly>
+                </div>
+              </div>
+			  
+			  <div class="row mb20">
+			  <label class="col-sm-3 control-label">Nama Kategori<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="namakat" value="<?php echo $hapus['namakat']; ?>" placeholder="0" title="Nama Kategori" readonly>
+                </div>
+              </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Kode Departement<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="dept" value="<?php echo $hapus['dept']; ?>" placeholder="0" title="Kode Departement"readonly>
+                </div>
+              </div>
+
+          <div class="row mb20">
+			  <label class="col-sm-3 control-label">Nama Departement<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="namadept" value="<?php echo $hapus['namadept']; ?>" placeholder="0" title="Nama Departement"readonly>
+                </div>
+              </div>
+
+          <div class="row mb20">
+			  <label class="col-sm-3 control-label">Kode Divisi<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="divisi" value="<?php echo $hapus['divisi']; ?>" placeholder="0" title="Kode Divisi"readonly>
+                </div>
+              </div>
+
+          <div class="row mb20">
+			  <label class="col-sm-3 control-label">Nama Divisi<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="namadivisi" value="<?php echo $hapus['namadivisi']; ?>" placeholder="0" title="Nama Divisi"readonly>
+                </div>
+              </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Tax<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                <input type="text" class="form-control" name="tax" value="<?php echo $hapus['tax']; ?>" placeholder="0" title="Tax" readonly>
+                </div>
+              </div>
+			
+		   </div><!-- panel-body -->
+          </div><!-- panel -->
+        </div><!-- col-md-6 -->
+		 </form>
+      </div><!--row -->
+    </div><!-- contentpanel -->
+
+
+
+	
+
+	
+

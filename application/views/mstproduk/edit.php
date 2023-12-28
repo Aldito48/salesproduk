@@ -1,5 +1,7 @@
-<div class="contentpanel">
-      <div class="row">	   <form id="basicForm" method="POST" action="<?php echo base_url(); ?>Mstproduk/update" class="form-horizontal">
+<div class="contentpanel">
+
+      <div class="row">
+	   <form id="basicForm" method="POST" action="<?php echo base_url(); ?>Mstproduk/update" class="form-horizontal">
         <div class="col-md-6">
           <div class="panel">
               <div class="panel-heading nopaddingbottom">
@@ -8,21 +10,206 @@
               <div class="panel-body">
                 <hr>
               
-				<input type="hidden" name="id" value="<?php echo $edit['id']; ?>" class="form-control"  />
-                  <div class="form-group">                    <label class="col-sm-3 control-label">code<span class="text-danger">*</span></label>                    <div class="col-sm-4">                      <input type="text" name="code" value="<?php echo $edit['code']; ?>" class="form-control" placeholder="code" required />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">description<span class="text-danger">*</span></label>                    <div class="col-sm-8">                      <input type="text" name="description" value="<?php echo $edit['description']; ?>" class="form-control" placeholder="description" required />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Prodi<span class="text-danger">*</span></label>                    <div class="col-sm-8">                      <input type="text" name="prodi" value="<?php echo $edit['prodi']; ?>" class="form-control" placeholder="Prodi" required />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Jurusan<span class="text-danger">*</span></label>                    <div class="col-sm-8">                      <input type="text" name="jurusan" value="<?php echo $edit['jurusan']; ?>" class="form-control" placeholder="Jurusan" required />                    </div>                  </div>                  <div class="form-group">                    <label class="col-sm-3 control-label">Professor PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="professor_pns" value="<?php echo $edit['professor_pns']; ?>" class="form-control" placeholder="Professor PNS" required />                    </div>                  </div>								 <div class="form-group">                    <label class="col-sm-3 control-label">Professor Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="professor_non_pns" value="<?php echo $edit['professor_non_pns']; ?>" class="form-control" placeholder="Professor Non PNS" required />                    </div>                  </div>				  				  <div class="form-group">                    <label class="col-sm-3 control-label">Lektor Kepala PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="lektor_kepala_pns" value="<?php echo $edit['lektor_kepala_pns']; ?>" class="form-control" placeholder="Lektor Kepala PNS" required />                    </div>                  </div>								 <div class="form-group">                    <label class="col-sm-3 control-label">Lektor Kepala Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="lektor_kepala_non_pns" value="<?php echo $edit['lektor_kepala_non_pns']; ?>" class="form-control" placeholder="Lektor Kepala Non PNS" required />                    </div>                  </div>				  				  <div class="form-group">                    <label class="col-sm-3 control-label">Lektor PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="lektor_pns" value="<?php echo $edit['lektor_pns']; ?>" class="form-control" placeholder="Lektor PNS" required />                    </div>                  </div>		  
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-9 col-sm-offset-3">
-                      <button type="submit"  class="btn btn-success btn-quirk btn-wide mr5"><i class="fa fa-save"></i> Simpan</button>
-                      <a href="<?php echo base_url() ?>Tenaga_pendidik" class="btn btn-quirk btn-wide btn-danger"><i class="fa fa-close"></i> Kembali</a>
+				<input type="hidden" name="id" value="<?php echo $edit['id']; ?>" class="form-control"  />
+
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">code<span class="text-danger">*</span></label>
+                    <div class="col-sm-4">
+                      <input type="text" name="code" value="<?php echo $edit['code']; ?>" class="form-control" placeholder="code" required />
                     </div>
                   </div>
-               
+				  
+				   <div class="form-group">
+                    <label class="col-sm-3 control-label">description<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="description" value="<?php echo $edit['description']; ?>" class="form-control" placeholder="description" required />
+                    </div>
+                  </div>
+				  
+                  <div class="form-group">
+                    <label class="col-sm-3 control-label">MOQ<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="moq" value="<?php echo $edit['moq']; ?>" class="form-control" placeholder="Jurusan" title="Jurusan Harus Diisi" required />
+                    </div>
+                  </div>
+				  
+				   <div class="form-group">
+                    <label class="col-sm-3 control-label">Category PID<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="categorypid" class="form-control" value="<?php echo $edit['categorypid']; ?>" placeholder="Category PID" title="Category PID Harus Diisi" required />
+                    </div>
+                  </div>
+
+				   <div class="form-group">
+                    <label class="col-sm-3 control-label">Hierarchy<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="hierarchy" value="<?php echo $edit['hierarchy']; ?>" class="form-control" placeholder="0" title="Hierarchy Harus Diisi" required />
+                    </div>
+                   </div>
+				   
+				    <div class="form-group">
+                    <label class="col-sm-3 control-label">Material Group<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                      <input type="text" name="materialgroup" value="<?php echo $edit['materialgroup']; ?>" class="form-control" placeholder="0" title="Material Group"  required />
+                    </div>
+                   </div>
+				   
+				    <div class="row mb20">
+                    <label class="col-sm-3 control-label">DIV<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                    <input type="text" value="<?php echo $edit['datadiv']; ?>" name="datadiv" class="form-control" placeholder="0" title="DIV" required />
+                    </div>
+                   </div>
+			
+					<div class="row mb20">
+                    <label class="col-sm-3 control-label">Type PID<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="text" value="<?php echo $edit['typepid']; ?>" name="typepid" class="form-control" placeholder="0" title="Type PID" required />
+                    </div>
+                   </div>
+
+          <div class="row mb20">
+                    <label class="col-sm-3 control-label">Last Price (sales) Before PPN<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                    <input type="text" name="lastpricebfppn" value="<?php echo $edit['lastpricebfppn']; ?>" class="form-control" placeholder="0" title="Last Price (sales) Before PPN" required />
+                    </div>
+                   </div>
+
+          <div class="row mb20">
+                    <label class="col-sm-3 control-label">New Price (sales) Before PPN<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                    <input type="text" name="newpricebfppn" value="<?php echo $edit['newpricebfppn']; ?>" class="form-control" placeholder="0" title="New Price (sales) Before PPN" required />
+                    </div>
+                   </div>
+
+          <div class="row mb20">
+                    <label class="col-sm-3 control-label">Last Discount (%)<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="text" name="lastdiscount" value="<?php echo $edit['lastdiscount']; ?>" class="form-control" placeholder="0" title="Last Discount" required />
+                    </div>
+                   </div>
+
+          <div class="row mb20">
+                    <label class="col-sm-3 control-label">New Discount (%)<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="text" name="newdiscount" value="<?php echo $edit['newdiscount']; ?>" class="form-control" placeholder="0" title="New Discount" required />
+                    </div>
+                   </div>
+				   
+                  <hr>
+				  
+				    <div class="row">
+                    <div class="col-sm-9 col-sm-offset-3">
+                      <button type="submit" name="simpan" class="btn btn-success btn-quirk btn-wide mr5"><i class="fa fa-save"></i> Simpan</button>
+                      <a href="<?php echo base_url() ?>Mstproduk" class="btn btn-quirk btn-wide btn-danger"><i class="fa fa-close"></i> Kembali</a>
+                    </div>
+                  </div>
+			 	  
               </div><!-- panel-body -->
           </div><!-- panel -->
-        </div><!-- col-md-6 -->				<div class="col-sm-6">          <div class="panel">            <div class="panel-body">								<div class="form-group">                    <label class="col-sm-3 control-label">Lektor Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="lektor_non_pns" value="<?php echo $edit['lektor_non_pns']; ?>" class="form-control" placeholder="Lektor Non PNS" required />                    </div>                  </div>							  <div class="form-group">                    <label class="col-sm-3 control-label">Asisten Ahli PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="asisten_ahli_pns" value="<?php echo $edit['asisten_ahli_pns']; ?>" class="form-control" placeholder="Asisten Ahli PNS" required />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Asisten Ahli Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="asisten_ahli_non_pns" value="<?php echo $edit['asisten_ahli_non_pns']; ?>" class="form-control" placeholder="Asisten Ahli Non PNS" required />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Tenaga Pengajar PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="tenaga_pengajar_pns" value="<?php echo $edit['tenaga_pengajar_pns']; ?>" class="form-control" placeholder="Tenaga Pengajar PNS" required />                    </div>                  </div>				  				    <div class="form-group">                    <label class="col-sm-3 control-label">Tenaga Pengajar Non PNS<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="tenaga_pengajar_non_pns" value="<?php echo $edit['tenaga_pengajar_non_pns']; ?>" class="form-control" placeholder="Tenaga Pengajar Non PNS" required />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Kualifikasi S3<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="terkualifikasi_s3" value="<?php echo $edit['terkualifikasi_s3']; ?>" class="form-control" placeholder="Kualifikasi S3" required />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Kualifikasi Kompetensi Profesi<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="terkualifikasi_kompetensi_profesi" value="<?php echo $edit['terkualifikasi_kompetensi_profesi']; ?>" class="form-control" placeholder="Kualifikasi Kompetensi Profesi" required />                    </div>                  </div>				  				  <div class="form-group">                    <label class="col-sm-3 control-label">Kualifikasi Praktisi<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="terkualifikasi_praktisi" value="<?php echo $edit['terkualifikasi_praktisi']; ?>" class="form-control" placeholder="Kualifikasi Praktisi" required />                    </div>                  </div>				  				  <div class="form-group">                    <label class="col-sm-3 control-label">Pegawai PPPK<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="pegawai_pppk" value="<?php echo $edit['pegawai_pppk']; ?>" class="form-control" placeholder="Pegawai PPPK" required />                    </div>                  </div>				  				   <div class="form-group">                    <label class="col-sm-3 control-label">Tenaga Pengajar Punya NIDN<span class="text-danger">*</span></label>                    <div class="col-sm-3">                      <input type="number" name="nidn" value="<?php echo $edit['nidn']; ?>" class="form-control" placeholder="Tenaga Pengajar Punya NIDN" required />                    </div>                  </div>			</div><!-- panel-body -->          </div><!-- panel -->        </div><!-- col-md-6 -->
-	</div><!--row -->	</form>
-  </div><!-- contentpanel -->
-
-	
-	
+      </div><!-- col-md-6 -->
+		
+		  <div class="col-sm-6">
+          <div class="panel">
+            <div class="panel-body">
+			
+					<div class="row mb20">
+                    <label class="col-sm-3 control-label">PPN<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="text" name="ppn" class="form-control" value="<?php echo $edit['ppn']; ?>" placeholder="0" title="PPN" required />
+                    </div>
+                   </div>
+			
+              <div class="row mb20">
+			  <label class="col-sm-3 control-label">Buy Price Before PPN<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="buypricebfppn" value="<?php echo $edit['buypricebfppn']; ?>" placeholder="0"  title="Buy Price Before PPN" required>
+                </div>     
+			  </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Buy Price After PPN<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="buypriceafppn" value="<?php echo $edit['buypriceafppn']; ?>" placeholder="0" title="Buy Price After PPN" required>
+                </div>
+              </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Sale Price After PPN<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="salepriceafppn" value="<?php echo $edit['salepriceafppn']; ?>" placeholder="0" title="Sale Price After PPN" required>
+                </div>
+              </div>
+			  
+			  <div class="row mb20">
+			  <label class="col-sm-3 control-label">Kode Sub Kategori<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" value="<?php echo $edit['subkat']; ?>" name="subkat" placeholder="0" title="Kode Sub Kategori" required>
+                </div>
+              </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Nama Sub Kategori<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" value="<?php echo $edit['namasubkat']; ?>" name="namasubkat" placeholder="0" title="Nama Sub Kategori" required>
+                </div>
+              </div>
+			  
+			    <div class="row mb20">
+			  <label class="col-sm-3 control-label">Kode Kategori<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="kat" value="<?php echo $edit['kat']; ?>" placeholder="0" title="Kode Kategori" required>
+                </div>
+              </div>
+			  
+			  <div class="row mb20">
+			  <label class="col-sm-3 control-label">Nama Kategori<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="namakat" value="<?php echo $edit['namakat']; ?>" placeholder="0" title="Nama Kategori" required>
+                </div>
+              </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Kode Departement<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="dept" value="<?php echo $edit['dept']; ?>" placeholder="0" title="Kode Departement"required>
+                </div>
+              </div>
+
+          <div class="row mb20">
+			  <label class="col-sm-3 control-label">Nama Departement<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="namadept" value="<?php echo $edit['namadept']; ?>" placeholder="0" title="Nama Departement"required>
+                </div>
+              </div>
+
+          <div class="row mb20">
+			  <label class="col-sm-3 control-label">Kode Divisi<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="divisi" value="<?php echo $edit['divisi']; ?>" placeholder="0" title="Kode Divisi"required>
+                </div>
+              </div>
+
+          <div class="row mb20">
+			  <label class="col-sm-3 control-label">Nama Divisi<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" name="namadivisi" value="<?php echo $edit['namadivisi']; ?>" placeholder="0" title="Nama Divisi"required>
+                </div>
+              </div>
+			  
+			   <div class="row mb20">
+			  <label class="col-sm-3 control-label">Tax<span class="text-danger">*</span></label>
+                <div class="col-sm-8">
+                  <select class="form-control" name="tax" required>
+                    <option disabled selected style="display: none;" value="">Pilih</option>
+                    <option selected>Y</option>
+                    <option>N</option>
+                  </select>
+                </div>
+              </div>
+			</div><!-- panel-body -->
+          </div><!-- panel -->
+        </div><!-- col-md-6 -->
+	</div><!--row -->
+	</form>
+  </div><!-- contentpanel -->
