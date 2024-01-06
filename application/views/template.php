@@ -42,8 +42,8 @@
 <header>
   <div class="headerpanel">
 
-    <div class="logopanel">
-      <h3 style="color:white">Sales Produk</h3>
+    <div class="logopanel" style="display: flex; justify-content: center; align-items: center;">
+      <h3 style="color:white">SALES PRODUK</h3>
     </div><!-- logopanel -->
 
     <div class="headerbar">
@@ -119,7 +119,7 @@
         <!-- ################# MAIN MENU ################### -->
 
         <div class="tab-pane active" id="mainmenu">
-          <h5 class="sidebar-title">Menu Utama</h5>
+          <h5 class="sidebar-title">Menu</h5>
          
     <ul class="nav nav-pills nav-stacked nav-quirk">
 		  

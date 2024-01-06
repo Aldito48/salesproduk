@@ -9,7 +9,7 @@
           
              <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert" ></button>
-                <h4><strong>Dashboard BIOS</strong></h4> 
+                <h4><strong>Dashboard Sales Produk</strong></h4> 
               </div>
           </div><!-- panel -->
 		
