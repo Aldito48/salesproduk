@@ -58,7 +58,7 @@
 
                   <div class="row">
                     <div class="col-sm-9 col-sm-offset-3">
-                      <button type="submit"  class="btn btn-success btn-quirk btn-wide mr5"><i class="fa fa-save"></i> Simpan</button>
+                      <button type="submit" name="simpan"  class="btn btn-success btn-quirk btn-wide mr5"><i class="fa fa-save"></i> Simpan</button>
                       <a href="<?php echo base_url() ?>Mstcustomer" class="btn btn-quirk btn-wide btn-danger"><i class="fa fa-close"></i> Kembali</a>
                     </div>
                   </div>

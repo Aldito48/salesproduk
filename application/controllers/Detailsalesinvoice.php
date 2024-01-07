@@ -42,7 +42,7 @@ class Detailsalesinvoice extends CI_Controller {
 		 if (isset($_POST['simpan'])) {
 		 
 	    $this->s->simpan(); 
-		 echo "<script>alert('Data Produk Berhasil Disimpan');
+		 echo "<script>alert('Data Detail Sales Invoice Berhasil Disimpan');
 		     window.location.replace('../Detailsalesinvoice');
 		   </script>";
 		
