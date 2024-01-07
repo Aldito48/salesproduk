@@ -1,12 +1,12 @@
 <div class="contentpanel">
 
       <div class="row">
-	   <form id="basicForm" method="POST" action="<?php echo base_url(); ?>Detailsalesinvoice/update" class="form-horizontal">
+	   <form id="basicForm" method="POST" action="<?php echo base_url(); ?>Detailsalesinvoice/cut" class="form-horizontal">
 
         <div class="col-sm-6">
             <div class="panel">
                 <div class="panel-heading nopaddingbottom">
-                <h4 class="panel-title">Edit Entry Sales Invoice</h4>
+                <h4 class="panel-title">Discount</h4>
                 </div>
 
                 <div class="panel-body">
@@ -16,28 +16,28 @@
             <div class="form-group">
                     <label class="col-sm-3 control-label">Item <span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                        <input type="text" name="item" value="<?php echo $edit['item']; ?>" class="form-control"  placeholder="Item" title="Item Harus Diisi" required />
+                        <input type="text" name="item" value="<?php echo $edit['item']; ?>" class="form-control"  placeholder="Item" title="Item Harus Diisi" readonly/>
                     </div>
                     </div>
 
             <div class="form-group">
                     <label class="col-sm-3 control-label">Item Description<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                        <input type="text" name="item_description" value="<?php echo $edit['item_description']; ?>" class="form-control"  placeholder="Item Descripotion" title="Item Descripotion Harus Diisi" required />
+                        <input type="text" name="item_description" value="<?php echo $edit['item_description']; ?>" class="form-control"  placeholder="Item Descripotion" title="Item Descripotion Harus Diisi" readonly/>
                     </div>
                     </div>
             
             <div class="form-group">
                     <label class="col-sm-3 control-label">Qty<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                        <input type="number" name="qty" value="<?php echo $edit['qty']; ?>" class="form-control"  placeholder="Qty" title="Qty Harus Diisi" required />
+                        <input type="number" name="qty" value="<?php echo $edit['qty']; ?>" class="form-control"  placeholder="Qty" title="Qty Harus Diisi" readonly/>
                     </div>
                     </div>
             
             <div class="form-group">
                     <label class="col-sm-3 control-label">Item Unit<span class="text-danger">*</span></label>
                     <div class="col-sm-8">
-                        <input type="text" name="item_unit" value="<?php echo $edit['item_unit']; ?>" class="form-control"  placeholder="Item Unit" title="Item Unit Harus Diisi" required />
+                        <input type="text" name="item_unit" value="<?php echo $edit['item_unit']; ?>" class="form-control"  placeholder="Item Unit" title="Item Unit Harus Diisi" readonly/>
                     </div>
                     </div>    
             
@@ -61,35 +61,35 @@
               <div class="form-group">
                         <label class="col-sm-3 control-label">Unit Price<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                        <input type="number" name="unit_price" value="<?php echo $edit['unit_price']; ?>" class="form-control"  placeholder="Unit Price" title="Unit Price Harus Diisi" required />
+                        <input type="number" name="unit_price" value="<?php echo $edit['unit_price']; ?>" class="form-control"  placeholder="Unit Price" title="Unit Price Harus Diisi" readonly />
                         </div>
                       </div>
           
               <div class="form-group">
                         <label class="col-sm-3 control-label">Amount<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                        <input type="number" name="amount" value="<?php echo $edit['amount']; ?>" class="form-control"  placeholder="Amount" title="Amount Harus Diisi" required />
+                        <input type="number" name="amount" value="<?php echo $edit['amount']; ?>" class="form-control" id="amount"  placeholder="Amount" title="Amount Harus Diisi" readonly />
                         </div>
                       </div>
           
               <div class="form-group">
                         <label class="col-sm-3 control-label">Discount (%)<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                        <input type="number" name="disc_persentage" value="<?php echo $edit['disc_persentage']; ?>" class="form-control"  placeholder="Discount" disabled />
+                        <input type="number" id="disc_persentage" name="disc_persentage" value="<?php echo $edit['disc_persentage']; ?>" class="form-control"  placeholder="Discount" required />
                         </div>
                       </div>
             
               <div class="form-group">
                         <label class="col-sm-3 control-label">Disc Price<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                        <input type="number" name="disc_price" value="<?php echo $edit['disc_price']; ?>" class="form-control"  placeholder="Disc Price" disabled/>
+                        <input type="number" id="disc_price" name="disc_price" value="<?php echo $edit['disc_price']; ?>" class="form-control"  placeholder="Disc Price" readonly />
                         </div>
                       </div>
             
               <div class="form-group">
                         <label class="col-sm-3 control-label">Net Price<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                        <input type="number" name="net_price" value="<?php echo $edit['net_price']; ?>" class="form-control"  placeholder="Net Price" disabled/>
+                        <input type="number" id="net_price" name="net_price" value="<?php echo $edit['net_price']; ?>" class="form-control"  placeholder="Net Price" readonly />
                         </div>
                       </div>
             
@@ -99,4 +99,23 @@
 
 	</div><!--row -->
 	</form>
+    <script>
+        var amount = document.getElementById('amount');
+        var disc_persentage = document.getElementById('disc_persentage');
+        var disc_price = document.getElementById('disc_price');
+        var net_price = document.getElementById('net_price');
+
+        function calculate() {
+            var amountValue = parseFloat(amount.value);
+            var discPercentageValue = parseFloat(disc_persentage.value);
+
+            var discount = (amountValue * discPercentageValue) / 100;
+            var discountPrice = amountValue - discount;
+
+            disc_price.value = discount;
+            net_price.value = discountPrice;
+        }
+        amount.addEventListener('input', calculate);
+        disc_persentage.addEventListener('input', calculate);
+    </script>
   </div><!-- contentpanel -->

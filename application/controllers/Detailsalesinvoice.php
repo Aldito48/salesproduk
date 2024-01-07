@@ -82,7 +82,40 @@ class Detailsalesinvoice extends CI_Controller {
 	     
 		 $this->template->load('template', 'detailsalesinvoice/edit', $data);
     
-   }	 
+   }
+   public function cut()
+   {
+	   if(isset($_POST['id'])) 
+	   {
+		$this->s->disc();
+		
+		
+		echo "<script>alert('Data Detail Sales Invoice Berhasil Di Berikan Diskon');
+			 window.location.replace('../Detailsalesinvoice');
+			</script>	
+			";
+	   } else {
+		   redirect(base_url('Detailsalesinvoice'));
+	   }	
+   } 
+	
+   public function disc()
+   {
+	    if(isset($_POST['id'])){
+		
+		 $id=$this->input->post('id');
+		 
+		 
+		 $data['edit'] = $this->db->get_where('tbl_detailsalesinvoice', array('id' => $id))->row_Array();
+		 
+		
+		 } else {
+			 redirect(base_url('Detailsalesinvoice'));
+		 }
+	     
+		 $this->template->load('template', 'detailsalesinvoice/disc', $data);
+    
+   }
    public function hapus()
    {
 	    if(isset($_POST['id'])){

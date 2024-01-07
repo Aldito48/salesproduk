@@ -48,6 +48,20 @@ Public function simpan()
 				'item_unit' => $this->input->post('item_unit'),
 				'unit_price' => $this->input->post('unit_price'),
 				'amount' => $this->input->post('amount'),
+			);
+
+	$id=$this->input->post('id');
+			$this->db->where('id',$id);
+			$this->db->update('tbl_detailsalesinvoice',$data);		
+
+ }
+
+ public function disc()
+
+ {
+	
+	 
+   $data = array(
 				'disc_persentage' => $this->input->post('disc_persentage'),
 				'disc_price' => $this->input->post('disc_price'),
 				'net_price' => $this->input->post('net_price'),
@@ -57,7 +71,7 @@ Public function simpan()
 			$this->db->where('id',$id);
 			$this->db->update('tbl_detailsalesinvoice',$data);		
 
- }	 
+ }
 
  public function hapus()
 

@@ -3,7 +3,7 @@
       <div class="row">
 	  <form id="basicForm" method="POST" action="<?php echo base_url(); ?>Detailsalesinvoice/simpan" class="form-horizontal">
 	  
-         <div class="col-sm-6">
+         <div class="col-sm-12">
           <div class="panel">
               <div class="panel-heading nopaddingbottom">
                 <h4 class="panel-title">Entry Sales Invoice</h4>
@@ -38,7 +38,21 @@
                     <div class="col-sm-8">
                       <input type="text" name="item_unit" class="form-control" placeholder="Item Unit" title="Item Unit Harus Diisi" required />
                     </div>
-                  </div>    
+                  </div>
+            
+            <div class="form-group">
+                    <label class="col-sm-3 control-label">Unit Price<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                    <input type="number" name="unit_price" class="form-control" placeholder="Unit Price" title="Unit Price Harus Diisi" required />
+                    </div>
+                   </div>
+			
+          <div class="form-group">
+                    <label class="col-sm-3 control-label">Amount<span class="text-danger">*</span></label>
+                    <div class="col-sm-8">
+                     <input type="number" name="amount" class="form-control" placeholder="Amount" title="Amount Harus Diisi" required />
+                    </div>
+                   </div>
 				   
                   <hr>
 				  
@@ -52,49 +66,6 @@
               </div><!-- panel-body -->
           </div><!-- panel -->
         </div><!-- col-md-6 -->
-		
-		<div class="col-sm-6">
-          <div class="panel">
-            <div class="panel-body">
-			
-          <div class="form-group">
-                    <label class="col-sm-3 control-label">Unit Price<span class="text-danger">*</span></label>
-                    <div class="col-sm-8">
-                    <input type="number" name="unit_price" class="form-control" placeholder="Unit Price" title="Unit Price Harus Diisi" required />
-                    </div>
-                   </div>
-			
-          <div class="form-group">
-                    <label class="col-sm-3 control-label">Amount<span class="text-danger">*</span></label>
-                    <div class="col-sm-8">
-                     <input type="number" name="amount" class="form-control" placeholder="Amount" title="Amount Harus Diisi" required />
-                    </div>
-                   </div>
-			
-          <div class="form-group">
-                    <label class="col-sm-3 control-label">Discount (%)<span class="text-danger">*</span></label>
-                    <div class="col-sm-8">
-                     <input type="number" name="disc_persentage" value="0" class="form-control" placeholder="Discount" disabled/>
-                    </div>
-                   </div>
-			  
-          <div class="form-group">
-                    <label class="col-sm-3 control-label">Disc Price<span class="text-danger">*</span></label>
-                    <div class="col-sm-8">
-                     <input type="number" name="disc_price" value="0" class="form-control" placeholder="Disc Price" disabled/>
-                    </div>
-                   </div>
-			  
-          <div class="form-group">
-                    <label class="col-sm-3 control-label">Net Price<span class="text-danger">*</span></label>
-                    <div class="col-sm-8">
-                     <input type="number" name="net_price" value="0" class="form-control" placeholder="Net Price" disabled/>
-                    </div>
-                   </div>
-			  
-            </div>
-          </div>
-		</div>
 		
       </div><!--row -->
 	 </form>

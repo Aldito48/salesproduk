@@ -87,7 +87,13 @@
 
 											'<form action="<?php echo base_url() ?>Detailsalesinvoice/hapus" method="POST"><input type="hidden" name="id" value="'+data[i].id+'" ><button  data-toggle="tooltip" data-placement="top" title="Hapus" class="btn btn-danger"><i class="fa fa-trash"></i></button></form>'+' '+
 
-									    '</td>'+			
+									    '</td>'+
+										
+										'<td>'+
+
+											'<form action="<?php echo base_url() ?>Detailsalesinvoice/disc" method="POST"><input type="hidden" name="id" value="'+data[i].id+'" ><button  data-toggle="tooltip" data-placement="top" title="Discount" class="btn btn-warning"><i class="fa fa-tag"></i></button></form>'+' '+
+
+									    '</td>'+
 
 								'</tr>'+	
 								'</table>'+	
