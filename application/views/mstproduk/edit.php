@@ -204,49 +204,49 @@
                 <div class="form-group">
                         <label class="col-sm-3 control-label">Qty Beli<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" value="<?php echo $edit['qtybeli']; ?>" name="qtybeli" placeholder="Qty Beli" title="Qty Beli Harus Di isi"required>
+                          <input type="number" class="form-control" value="<?php echo $edit['qtybeli']; ?>" name="qtybeli" placeholder="Qty Beli" title="Qty Beli Harus Di isi"required>
                         </div>
                       </div>
 
                 <div class="form-group">
                         <label class="col-sm-3 control-label">Qty Jual<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" value="<?php echo $edit['qtyjual']; ?>" name="qtyjual" placeholder="Qty Jual" title="Qty Jual Harus Di isi"required>
+                          <input type="number" class="form-control" value="<?php echo $edit['qtyjual']; ?>" name="qtyjual" placeholder="Qty Jual" title="Qty Jual Harus Di isi"required>
                         </div>
                       </div>
 
                 <div class="form-group">
                         <label class="col-sm-3 control-label">Qty Retur<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" name="qtyretur" value="<?php echo $edit['qtyretur']; ?>" placeholder="Qty Retur" title="Qty Retur Harus Di isi"required>
+                          <input type="number" class="form-control" name="qtyretur" value="<?php echo $edit['qtyretur']; ?>" placeholder="Qty Retur" title="Qty Retur Harus Di isi"required>
                         </div>
                       </div>
 
                 <div class="form-group">
                         <label class="col-sm-3 control-label">Qty Adjust<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" value="<?php echo $edit['qtyadjust']; ?>" name="qtyadjust" placeholder="Qty Adjust" title="Qty Adjust Harus Di isi"required>
+                          <input type="number" class="form-control" value="<?php echo $edit['qtyadjust']; ?>" name="qtyadjust" placeholder="Qty Adjust" title="Qty Adjust Harus Di isi"required>
                         </div>
                       </div>
 
                 <div class="form-group">
                         <label class="col-sm-3 control-label">Qty Mutasi<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" value="<?php echo $edit['qtymutasi']; ?>" name="qtymutasi" placeholder="Qty Mutasi" title="Qty Mutasi Harus Di isi"required>
+                          <input type="number" class="form-control" value="<?php echo $edit['qtymutasi']; ?>" name="qtymutasi" placeholder="Qty Mutasi" title="Qty Mutasi Harus Di isi"required>
                         </div>
                       </div>
 
                 <div class="form-group">
                         <label class="col-sm-3 control-label">Stok Awal<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" name="stokawal" value="<?php echo $edit['stokawal']; ?>" placeholder="Stok Awal" title="Stok Awal Harus Di isi"required>
+                          <input type="number" class="form-control" name="stokawal" value="<?php echo $edit['stokawal']; ?>" placeholder="Stok Awal" title="Stok Awal Harus Di isi"required>
                         </div>
                       </div>
 
                 <div class="form-group">
                         <label class="col-sm-3 control-label">Stok Akhir<span class="text-danger">*</span></label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" value="<?php echo $edit['stokakhir']; ?>" name="stokakhir" placeholder="Stok Akhir" title="Stok Akhir Harus Di isi"required>
+                          <input type="number" class="form-control" value="<?php echo $edit['stokakhir']; ?>" name="stokakhir" placeholder="Stok Akhir" title="Stok Akhir Harus Di isi"required>
                         </div>
                       </div>
               
